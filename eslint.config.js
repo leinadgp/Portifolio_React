@@ -1,29 +1,69 @@
 import js from '@eslint/js'
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import pluginReact from 'eslint-plugin-react'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
+import pluginPrettier from 'eslint-plugin-prettier'
+import pluginImportHelpers from 'eslint-plugin-import-helpers'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // Regras JS padrão
+  {
+    ...js.configs.recommended
+  },
+
+  // Regras do React recomendadas
+  {
+    ...pluginReact.configs.flat.recommended
+  },
+
+  // Sua configuração customizada vem por último para sobrescrever o que for necessário
   {
     files: ['**/*.{js,jsx}'],
-    extends: [
-      js.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite,
-    ],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.browser
+    },
+    plugins: {
+      react: pluginReact,
+      'react-hooks': pluginReactHooks,
+      prettier: pluginPrettier,
+      'import-helpers': pluginImportHelpers
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-    },
-  },
+      'prettier/prettier': [
+        'error',
+        {
+          printWidth: 80,
+          tabWidth: 2,
+          singleQuote: true,
+          trailingComma: 'none',
+          arrowParens: 'always',
+          semi: false,
+          endOfLine: 'auto'
+        }
+      ],
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'import-helpers/order-imports': [
+        'warn',
+        {
+          newlinesBetween: 'always',
+          groups: [
+            '/^react/',
+            'module',
+            '/^@shared/',
+            ['parent', 'sibling', 'index']
+          ],
+          alphabetize: {
+            order: 'asc',
+            ignoreCase: true
+          }
+        }
+      ]
+    }
+  }
 ])
