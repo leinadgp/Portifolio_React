@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Background, ContainerMain, StyledLink } from "./styles";
+import { ContainerMain, StyledLink } from "./styles";
 
 function Home() {
   const spanRef = useRef(null);
@@ -56,10 +56,9 @@ function Home() {
   }, []);
 
   return (
-    <Background>
-      <ContainerMain className="principal">
+      <ContainerMain>
         <div>
-          <h1 className="txtEfeito">
+          <h1>
             Daniel Guimarães Dev{" "}
             <span ref={spanRef} data-value="Front End">Front End</span>.
           </h1>
@@ -70,16 +69,14 @@ function Home() {
           </p>
           <StyledLink to="/projetos">Ver Projetos</StyledLink>
         </div>
-        <div className="container-imgprincipal">
+        <div>
           <img
-            className="imgprincipal"
             src="./src/assets/img/img_principal.png"
             alt="Imagem principal"
           />
         </div>
       </ContainerMain>
-    </Background>
-  );
+  )
 }
 
 export default Home;

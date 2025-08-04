@@ -1,76 +1,64 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
-const scale = keyframes`
-    from {
-        transform: scale(0);
-    }
-    to{
-        transform: scale(1);
-    }
-`
-
-export const Background = styled.div`
-  background-image: url(${(props) => props.$img});
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  max-width: 100%;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 110%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-`
 export const ContainerMain = styled.div`
-  z-index: 2;
-  display: flex;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-`
-export const Title = styled.div`
-  display: flex;
-  padding: 20px;
-  width: 45%;
-  flex-direction: column;
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 15px;
-    margin-top: 200px;
+  padding-top: 80px ;
+  padding-left: 80px;
+  h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    position: relative;
   }
-  p {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 85px;
+    top: 130px;
+    width: 100px;
+    height: 4px;
+    background-color: #4d7cfe;
   }
-`
-
-export const Poster = styled.div`
-  width: 30%;
-  align-items: center;
+`;
+export const ContainerGaleria = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+
   img {
-    width: 250px;
-    border-radius: 30px;
-    animation: ${scale} 0.5s linear;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
   }
-`
-export const ContainerButtons = styled.div`
+  img:hover {
+    transform: scale(1.05);
+  }
+`;
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  gap: 20px;
-  margin-top: 25px;
-`
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #fff;
+  }
+`;

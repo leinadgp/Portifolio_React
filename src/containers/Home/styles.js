@@ -1,37 +1,15 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
-
-
-export const Background = styled.div`
-  background-image: url(${(props) => props.$img});
-  height: 90vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  max-width: 100%;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 110%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-`
 export const ContainerMain = styled.div`
   display: flex;
   height: 100vh;
   width: 100vw;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 190px;
+  padding: 0 100px;
+  
   h1 {
   font-size: 2.5rem;
   line-height: 1.1;
@@ -49,11 +27,8 @@ export const ContainerMain = styled.div`
   margin-bottom: 40px;
   }
   img {
-    
   height: auto;
-  position: fixed;
-  top: 70px;
-  right: 40px;
+  
 }
 `
 
