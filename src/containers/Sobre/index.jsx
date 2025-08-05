@@ -5,13 +5,13 @@ import { ContainerMain, Container, Habilidades } from "./styles";
 function Sobre() {
   return (
     <>
-        <ContainerMain class="secao">
-          <h2 class="titulo-secao">Sobre Mim</h2>
+        <ContainerMain>
+          <h2>Sobre Mim</h2>
 
-          <Container class="sobre">
-            <img class="img-sobre" src={imgSobre} />
+          <Container>
+            <img src={imgSobre} />
 
-            <div class="conteudo-sobre">
+            <div>
               <h2>Desenvolvedor com paixão por criar soluções digitais</h2>
               <p>
                 Sou desenvolvedor front-end com foco em criar interfaces

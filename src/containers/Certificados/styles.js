@@ -1,18 +1,18 @@
 import styled, { keyframes } from "styled-components";
 
 export const ContainerMain = styled.div`
-  padding-top: 80px ;
+  padding-top: 100px ;
   padding-left: 80px;
   h2 {
     font-size: 42px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     position: relative;
   }
   &::after {
     content: "";
     position: absolute;
     left: 85px;
-    top: 130px;
+    top: 150px;
     width: 100px;
     height: 4px;
     background-color: #4d7cfe;
@@ -23,7 +23,11 @@ export const ContainerGaleria = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-
+  h3{
+    font-size: 1rem;
+    max-width: 210px;
+    text-align: center;
+  }
   img {
     width: 200px;
     height: auto;
@@ -45,7 +49,7 @@ export const Modal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 99;
 
   span {
     position: absolute;
@@ -60,5 +64,6 @@ export const Modal = styled.div`
     max-height: 80%;
     border-radius: 8px;
     box-shadow: 0 0 15px #fff;
+    z-index: 999;
   }
 `;

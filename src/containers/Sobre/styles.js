@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const ContainerMain = styled.div`
-  padding-top: 60px ;
+  padding-top: 100px ;
   padding-left: 80px;
   h2 {
     font-size: 42px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     position: relative;
   }
   &::after {
     content: "";
     position: absolute;
-    left: 85px;
-    top: 115px;
+    left: 80px;
+    top: 145px;
     width: 100px;
     height: 4px;
     background-color: #4d7cfe;

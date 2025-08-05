@@ -9,7 +9,7 @@ import imgDevFruits from "../../assets/img/refriDev.png";
 import imgStarbucks from "../../assets/img/starbucks.png";
 import imgPetShoop from "../../assets/img/petshop.png";
 
-import { Container } from "./styles";
+import { Container, ContainerMain } from "./styles";
 
 const projects = [
   {
@@ -20,28 +20,56 @@ const projects = [
     title: "Dev Movie",
     link: "https://leinadgp.github.io/projeto_dev_movie/",
     img: imgDevMovies,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: true }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: true,
+    },
   },
   {
     description: `Este projeto é uma aplicação simples e funcional de lista de tarefas (To-Do List) desenvolvida com React. O objetivo foi praticar conceitos fundamentais do React como useState, componentização e Styled Components, além de trabalhar com props dinâmicas para estilização condicional.`,
     title: "Lista de Tarefas",
     link: "https://leinadgp.github.io/Lista_Tarefas/",
     img: imgListaTaregas,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: true }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: true,
+    },
   },
   {
     description: `Site que simula o sistema de gerenciamento de uma hamburgueria, permitindo controle dinâmico do cardápio. Desenvolvido com HTML, CSS, JavaScript, PHP e MySQL, integra front-end e back-end para controle completo.`,
     title: "Hamburgueria",
     link: "https://danielguimaraes.infinityfree.me/",
     img: imgHamburgueria,
-    tec: { html: true, css: true, javascript: true, php: true, mysql: true, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: true,
+      mysql: true,
+      react: false,
+    },
   },
   {
     description: `Jogo interativo inspirado no clássico de Sheldon Cooper (The Big Bang Theory). Desenvolvido com HTML5, CSS3 e JavaScript, com lógica programada para determinar o vencedor de forma dinâmica.`,
     title: "Pedra, Papel, Tesoura, Lagarto e Spock 🖖",
     link: "https://leinadgp.github.io/ProjetoPPTLS_Bazinga/",
     img: imgPptls,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: false,
+    },
   },
   {
     description: `Conversor de moedas criado com HTML, CSS 
@@ -50,7 +78,14 @@ const projects = [
     title: "Conversor de Moedas",
     link: "https://leinadgp.github.io/projetoConversorMoeda/",
     img: imgConversor,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: false,
+    },
   },
   {
     description: `Uma galeria interativa que apresenta sabores 
@@ -58,7 +93,14 @@ const projects = [
     title: "Dev Fruites",
     link: "https://leinadgp.github.io/Projeto_Refri_Dev/",
     img: imgDevFruits,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: false,
+    },
   },
   {
     description: `Projeto replicando a página inicial da Starbucks,
@@ -67,7 +109,14 @@ const projects = [
     title: "Copia Starbucks",
     link: "https://leinadgp.github.io/Replica-Starbuks/",
     img: imgStarbucks,
-    tec: { html: true, css: true, javascript: true, php: false, mysql: false, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: false,
+    },
   },
   {
     description: `Este é um projeto educacional desenvolvido 
@@ -77,27 +126,36 @@ const projects = [
     title: "Pagina Simples Pet Shope",
     link: "https://leinadgp.github.io/Projeto-Pet-Shope-Simples/",
     img: imgPetShoop,
-    tec: { html: true, css: true, javascript: false, php: false, mysql: false, react: false }
+    tec: {
+      html: true,
+      css: true,
+      javascript: false,
+      php: false,
+      mysql: false,
+      react: false,
+    },
   },
   
-]
+];
 
 function Projetos() {
   return (
     <>
+      <ContainerMain>
+        <h2>Meus Projetos</h2>
         <Container>
           {projects.map((project, index) => (
-          <CardProjetos
-            key={index}
-            title={project.title}
-            description={project.description}
-            link={project.link}
-            img={project.img}
-            tec={project.tec}
-          />
-        ))}
+            <CardProjetos
+              key={index}
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              img={project.img}
+              tec={project.tec}
+            />
+          ))}
         </Container>
-  
+      </ContainerMain>
     </>
   );
 }
