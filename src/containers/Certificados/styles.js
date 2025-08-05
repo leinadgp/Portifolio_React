@@ -18,8 +18,7 @@ export const ContainerMain = styled.div`
     background-color: #4d7cfe;
   }
    @media (max-width: 768px) {
-     padding-top: 70px ;
-     padding-left: 5px;
+     padding: 70px 10px;
   h2 {
     font-size: 22px;
     position: relative;
