@@ -89,7 +89,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
 @media (max-width: 768px) {
   flex-direction: column;
   padding: 0 10px;
-  margin-top: 95px;
+  margin-top: 155px;
   justify-content: flex-start;
   h1{
     font-size: 1.7rem;
@@ -98,7 +98,8 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
     line-height: 1;
   }
   img {
-  height: 200px
+  height: 300px;
+  margin-top: 25px;
   }
 }
 
@@ -424,7 +425,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   }
    @media (max-width: 768px) {
      padding-top: 70px ;
-     padding-left: 20px;
+     padding-left: 5px;
   h2 {
     font-size: 22px;
     position: relative;
@@ -432,7 +433,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   &::after {
     content: "";
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 95px;
       }
    }
