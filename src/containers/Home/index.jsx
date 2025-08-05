@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ContainerMain, StyledLink } from "./styles";
-import foto from "../../assets/img/img_principal.png";
+import fotoPrincipal from "../../assets/img/img_principal.png";
 
 function Home() {
   const spanRef = useRef(null);
@@ -72,7 +72,7 @@ function Home() {
         </div>
         <div>
           <img
-            src={foto}
+            src={fotoPrincipal}
             alt="Imagem principal"
           />
         </div>
