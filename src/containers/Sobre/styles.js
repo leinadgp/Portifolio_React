@@ -17,6 +17,20 @@ export const ContainerMain = styled.div`
     height: 4px;
     background-color: #4d7cfe;
   }
+   @media (max-width: 768px) {
+     padding-top: 70px ;
+     padding-left: 20px;
+  h2 {
+    font-size: 22px;
+    position: relative;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 95px;
+      }
+   }
 `;
 
 export const Container = styled.div`
@@ -38,6 +52,15 @@ export const Container = styled.div`
     background-color: #161616;
     border-radius: 35px;
   }
+   @media (max-width: 768px) {
+     grid-template-columns: 1fr ;
+     margin: 0 25px;
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 250px;
+    }
+   }
 `;
 
 export const Habilidades = styled.div`

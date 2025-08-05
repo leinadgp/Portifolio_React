@@ -17,6 +17,20 @@ export const ContainerMain = styled.div`
     height: 4px;
     background-color: #4d7cfe;
   }
+   @media (max-width: 768px) {
+     padding-top: 70px ;
+     padding-left: 20px;
+  h2 {
+    font-size: 22px;
+    position: relative;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 95px;
+      }
+   }
 `;
 
 export const Container = styled.div`
@@ -40,6 +54,11 @@ export const Container = styled.div`
       transform: translateY(-10px);
     }
   }
+  @media (max-width: 768px) {
+    p {
+      font-size: 17px;
+    }
+  }
 `;
 
 export const ButtonContato = styled.div`
@@ -60,6 +79,11 @@ export const ButtonContato = styled.div`
     min-width: 160px;
     text-decoration: none;
     color: white;
+  }
+  @media (max-width: 768px) {
+    a {
+      min-width: 100px;
+    }
   }
 `;
 

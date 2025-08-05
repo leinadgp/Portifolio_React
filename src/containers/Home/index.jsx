@@ -4,7 +4,8 @@ import fotoPrincipal from "../../assets/img/img_principal.png";
 
 function Home() {
   const spanRef = useRef(null);
-  const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const alfabeto =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
   const palavras = ["Front End", "Back End", "Full Stack", "Web Developer"];
   let palavraAtual = 0;
@@ -57,27 +58,27 @@ function Home() {
   }, []);
 
   return (
-      <ContainerMain>
-        <div>
-          <h1>
-            Daniel Guimarães Dev{" "}
-            <span ref={spanRef} data-value="Front End">Front End</span>.
-          </h1>
+    <ContainerMain>
+      <div>
+        <h1>
+          Daniel Guimarães Dev{" "}
+          <span ref={spanRef} data-value="Front End">
+            Front End
+          </span>
+          .
+        </h1>
 
-          <p>
-            Desenvolvedor com experiência em projetos que unem
-            criatividade, performance e usabilidade.
-          </p>
-          <StyledLink to="/projetos">Ver Projetos</StyledLink>
-        </div>
-        <div>
-          <img
-            src={fotoPrincipal}
-            alt="Imagem principal"
-          />
-        </div>
-      </ContainerMain>
-  )
+        <p>
+          Desenvolvedor com experiência em projetos que unem criatividade,
+          performance e usabilidade.
+        </p>
+        <StyledLink to="/projetos">Ver Projetos</StyledLink>
+      </div>
+      <div>
+        <img src={fotoPrincipal} alt="Imagem principal" />
+      </div>
+    </ContainerMain>
+  );
 }
 
 export default Home;

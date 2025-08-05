@@ -14,11 +14,22 @@ export const Container = styled.div`
   background-color: ${(props) =>
     props.$changeBackground ? '#000' : 'transparent'};
   transition: background-color 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 15px;
+  }
 `
 export const Menu = styled.ul`
   list-style: none;
   display: flex;
   gap: 50px;
+  @media (max-width: 768px) {
+    gap: 20px;
+    justify-content: flex-start;
+  
+  }
+
 `
 export const Li = styled.li`
   font-weight: 600;
@@ -43,4 +54,9 @@ export const Li = styled.li`
   &:hover::after {
     width: 100%;
   }
+
+   @media (max-width: 768px) {
+    font-size: 15px;
+    font-weight: 400;
+   }
 `

@@ -28,14 +28,36 @@ export const ContainerMain = styled.div`
   }
   img {
   height: auto;
-  
+  }
+@media (max-width: 768px) {
+  flex-direction: column;
+  padding: 0 10px;
+  margin-top: 95px;
+  justify-content: flex-start;
+  h1{
+    font-size: 1.7rem;
+    text-align: start;
+    padding-left: 15px;
+    line-height: 1;
+  }
+  img {
+  height: 200px
+  }
 }
+
+
 `
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: #4d7cfe;
   font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4d7cfe;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
 
   &:hover {
     opacity: 0.5;

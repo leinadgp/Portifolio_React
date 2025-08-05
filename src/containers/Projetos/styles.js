@@ -6,8 +6,10 @@ export const Container = styled.div`
   gap: 1.5rem; /* espaçamento entre itens */
   max-width: 1100px; /* 4 colunas de 300px = 1200px */
   margin: 30px auto;
-  `
-
+@media (max-width: 768px) {
+    margin: 30px 25px;
+}
+`
 export const ContainerMain = styled.div`
   padding-top: 100px ;
   padding-left: 80px;
@@ -24,4 +26,20 @@ export const ContainerMain = styled.div`
     height: 4px;
     background-color: #4d7cfe;
   }
+
+  @media (max-width: 768px) {
+     padding-top: 70px ;
+     padding-left: 20px;
+  h2 {
+    font-size: 22px;
+    position: relative;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 95px;
+      }
+   }
+  
 `;

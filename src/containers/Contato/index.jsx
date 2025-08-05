@@ -19,7 +19,7 @@ function Contato() {
           para oportunidades como desenvolvedor front-end e projetos freelance.
           Será um prazer conversar com você!
         </p>
-        <ButtonContato class="botoes-contato">
+        <ButtonContato>
           <Whatsapp
             href="https://wa.me/5551995531047?text=Olá_Daniel"
             target="_blank"

@@ -3,8 +3,6 @@ import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaReact } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
 function Button({ description, title, link, img, tec }) {
-  console.log(tec);
-
   return (
     <>
       <Container>
