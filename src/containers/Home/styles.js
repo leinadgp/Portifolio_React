@@ -32,7 +32,7 @@ export const ContainerMain = styled.div`
 @media (max-width: 768px) {
   flex-direction: column;
   padding: 0 10px;
-  margin-top: 95px;
+  margin-top: 155px;
   justify-content: flex-start;
   h1{
     font-size: 1.7rem;
@@ -41,7 +41,8 @@ export const ContainerMain = styled.div`
     line-height: 1;
   }
   img {
-  height: 200px
+  height: 300px;
+  margin-top: 25px;
   }
 }
 

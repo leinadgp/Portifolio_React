@@ -19,7 +19,7 @@ export const ContainerMain = styled.div`
   }
    @media (max-width: 768px) {
      padding-top: 70px ;
-     padding-left: 20px;
+     padding-left: 5px;
   h2 {
     font-size: 22px;
     position: relative;
@@ -27,7 +27,7 @@ export const ContainerMain = styled.div`
   &::after {
     content: "";
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 95px;
       }
    }
