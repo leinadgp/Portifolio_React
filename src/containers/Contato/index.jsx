@@ -21,7 +21,7 @@ function Contato() {
         </p>
         <ButtonContato>
           <Whatsapp
-            href="https://wa.me/5551995531047?text=Olá,%20Daniel!%20Tudo%20bem?%20Vi%20seu%20trabalho%20e%20quero%20conversar%20com%20você."
+            href="https://wa.me/5551995531047?text=Olá,%20Daniel!%20Tudo%20bem?%20Vi%20seu%20trabalho%20e%20quero%20conversar%20com%20você!"
 
             target="_blank"
             rel="noopener noreferrer"
