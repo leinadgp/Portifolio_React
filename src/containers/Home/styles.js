@@ -35,7 +35,7 @@ export const ContainerMain = styled.div`
   margin-top: 155px;
   justify-content: flex-start;
   h1{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: start;
     padding-left: 15px;
     line-height: 1;
