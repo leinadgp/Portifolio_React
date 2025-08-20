@@ -66,44 +66,50 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  
+
   h1 {
-  font-size: 2.5rem;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -4px;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -4px;
   }
   h1 span {
-  color: #4d7cfe;
+    color: #4d7cfe;
   }
   p {
-  font-size: 20px;
-  margin-bottom: 20px;
-  max-width: 600px;
-  color: #bbb;
-  margin-bottom: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    color: #bbb;
+    margin-bottom: 40px;
   }
   img {
-  height: auto;
+    height: auto;
   }
-@media (max-width: 768px) {
-  flex-direction: column;
-  padding: 0 10px;
-  margin-top: 155px;
-  justify-content: flex-start;
-  h1{
-    font-size: 1.5rem;
-    text-align: start;
-    padding-left: 15px;
-    line-height: 1;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: 155px;
+    justify-content: flex-start;
+    h1 {
+      font-size: 1.5rem;
+      text-align: start;
+      padding-left: 15px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    img {
+      height: 300px;
+      margin-top: 25px;
+    }
   }
-  img {
-  height: 300px;
-  margin-top: 25px;
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 1.2rem;
+      text-align: start;
+      padding-left: 0px;
+    }
   }
-}
-
-
 `,vy=Dt(ql)`
   text-decoration: none;
   color: #4d7cfe;
