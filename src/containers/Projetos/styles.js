@@ -28,7 +28,7 @@ export const ContainerMain = styled.div`
   }
 
   @media (max-width: 768px) {
-     padding-top: 70px ;
+     padding-top: 90px ;
      padding-left: 20px;
   h2 {
     font-size: 22px;
@@ -38,7 +38,7 @@ export const ContainerMain = styled.div`
     content: "";
     position: absolute;
     left: 20px;
-    top: 95px;
+    top: 115px;
       }
    }
   

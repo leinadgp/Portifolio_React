@@ -18,7 +18,7 @@ export const ContainerMain = styled.div`
     background-color: #4d7cfe;
   }
    @media (max-width: 768px) {
-     padding: 70px 10px;
+     padding: 90px 10px;
   h2 {
     font-size: 22px;
     position: relative;
@@ -27,7 +27,7 @@ export const ContainerMain = styled.div`
     content: "";
     position: absolute;
     left: 10px;
-    top: 95px;
+    top: 115px;
       }
    }
 `;

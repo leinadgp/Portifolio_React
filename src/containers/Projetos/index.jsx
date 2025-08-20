@@ -8,10 +8,28 @@ import imgConversor from "../../assets/img/conversor.png";
 import imgDevFruits from "../../assets/img/refriDev.png";
 import imgStarbucks from "../../assets/img/starbucks.png";
 import imgPetShoop from "../../assets/img/petshop.png";
+import vitrineCriativa from "../../assets/img/vitrineCriativa.png";
 
 import { Container, ContainerMain } from "./styles";
 
 const projects = [
+  {
+    description: `Aqui você pode explorar e compartilhar suas criações artísticas de forma 
+    prática e inspiradora. Nosso objetivo é criar um 
+    espaço completo, onde escritores, artistas e amantes da criatividade possam se conectar, 
+    compartilhar e se inspirar.`,
+    title: "Vitrine Criativa",
+    link: "https://feliperosa6567.github.io/vitrine_criativa/",
+    img: vitrineCriativa,
+    tec: {
+      html: true,
+      css: true,
+      javascript: true,
+      php: false,
+      mysql: false,
+      react: true,
+    },
+  },
   {
     description: `Aplicação web desenvolvida com React que permite explorar filmes,
               assistir trailers e acessar informações detalhadas como elenco,
@@ -135,7 +153,6 @@ const projects = [
       react: false,
     },
   },
-  
 ];
 
 function Projetos() {

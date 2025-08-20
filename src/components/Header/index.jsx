@@ -1,24 +1,68 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import { Container, Menu, Li } from './styles'
+import { Container, Menu, Li } from "./styles";
 
 function Header() {
-  const [changeBackground, setChangeBackground] = useState(false)
-  const { pathname } = useLocation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [changeBackground, setChangeBackground] = useState(false);
+  const { pathname } = useLocation();
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  window.onscroll = () => {
-    if (!changeBackground && window.pageYOffset > 150) {
-      setChangeBackground(true)
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Detecta clique fora do menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
     }
-    if (changeBackground && window.pageYOffset <= 150) {
-      setChangeBackground(false)
-    }
-  }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Alterar background do header no scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!changeBackground && window.scrollY > 80) {
+        setChangeBackground(true);
+      }
+      if (changeBackground && window.scrollY <= 80) {
+        setChangeBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [changeBackground]);
 
   return (
     <Container $changeBackground={changeBackground}>
-      <Menu>
+      <button
+        ref={buttonRef}
+        className="mobile-menu-btn"
+        onClick={toggleMobileMenu}
+      >
+        ☰
+      </button>
+      <Menu $isMobileOpen={isMobileMenuOpen} ref={menuRef}>
         <Li $isActive={pathname === '/'}>
           <Link to="/">Home</Link>
         </Li>
